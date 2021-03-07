@@ -6,7 +6,9 @@ Storage Layer - слой хранения данных
 Business Layer - слой для доступа к данным бизнес пользователей
 Необходимо использовать draw.io, Microsoft Visio Studio, Power Point или инструмент на выбор.
 
-[](https://github.com/xokcanax/DE-101/commit/5a50bdb8e628d62141a02e2507346136b4124d63)
+### Решение
+
+![High Level Architecture Scheme](https://github.com/xokcanax/DE-101/blob/main/Module1/High%20Level%20Architecture%20Scheme.png)
 
 ### Аналитика в Excel
 Используя данные [Sample - Superstore.xls](https://github.com/xokcanax/DE-101/blob/main/Module1/Sample%20-%20Superstore.xls) сделать:

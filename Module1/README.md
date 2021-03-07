@@ -7,7 +7,7 @@ Business Layer - слой для доступа к данным бизнес п�
 Необходимо использовать draw.io, Microsoft Visio Studio, Power Point или инструмент на выбор.
 
 ### Аналитика в Excel
-Используя данные [Sample - Superstore.xls](https://github.com/Data-Learn/data-engineering/blob/master/DE-101%20Modules/Module01/DE%20-%20101%20Lab%201.1/Sample%20-%20Superstore.xls?raw=true) сделать:
+Используя данные [Sample - Superstore.xls](https://github.com/xokcanax/DE-101/blob/main/Module1/Sample%20-%20Superstore.xls) сделать:
 
 Использовать Lookup
 Построить Сводную таблицу

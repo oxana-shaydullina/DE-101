@@ -8,10 +8,10 @@ Business Layer - слой для доступа к данным бизнес п�
 
 ### Решение
 
-![High Level Architecture Scheme](https://github.com/xokcanax/DE-101/blob/main/Module1/High%20Level%20Architecture%20Scheme.png)
+![High Level Architecture Scheme](https://github.com/xokcanax/DE-101/blob/main/Module01/High%20Level%20Architecture%20Scheme.png)
 
 ### Аналитика в Excel
-Используя данные [Sample - Superstore.xls](https://github.com/xokcanax/DE-101/blob/main/Module1/Sample%20-%20Superstore.xls) сделать:
+Используя данные [Sample - Superstore.xls](https://github.com/xokcanax/DE-101/blob/main/Module01/Sample%20-%20Superstore.xls) сделать:
 
 * Использовать Lookup
 * Построить Сводную таблицу
@@ -20,4 +20,4 @@ Business Layer - слой для доступа к данным бизнес п�
 * И другая функциональность Excel на ваш выбор
 
 ### Решение
-[Sample Superstore - Dashboard.xls](https://github.com/xokcanax/DE-101/blob/main/Module1/Sample%20Superstore%20-%20Dashboard.xlsx)
+[Sample Superstore - Dashboard.xls](https://github.com/xokcanax/DE-101/blob/main/Module01/Sample%20Superstore%20-%20Dashboard.xlsxx)

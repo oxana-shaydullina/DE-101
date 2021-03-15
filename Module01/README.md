@@ -1,4 +1,4 @@
-### Архитектура Аналитического Решения
+### High Level Architecture Scheme
 Create high level architecture scheme of analytical solution with the following layers:
 
 Source Layer - data source layer.

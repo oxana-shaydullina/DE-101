@@ -6,9 +6,9 @@
 
 #### Star by Kimball
 
-* Conceptual
-* Logycal
-* Physical
+![Conceptual Model](https://github.com/xokcanax/DE-101/blob/main/Module02/img/Conceptual%20model.png)
+
+![Physical Model](https://github.com/xokcanax/DE-101/blob/main/Module02/img/Physical%20model.png)
 
 
 

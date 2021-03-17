@@ -4,7 +4,7 @@
 
 ### Dimensional Modelling 
 
-Star scheme
+#### Star by Kimball
 
 * Conceptual
 * Logycal

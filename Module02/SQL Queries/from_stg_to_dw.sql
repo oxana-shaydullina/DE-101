@@ -64,7 +64,7 @@ CREATE TABLE geo_dim
  region      varchar(50) NOT NULL,
  state       varchar(50) NOT NULL,
  city        varchar(50) NOT NULL,
- postal_code int4 NULL,
+ postal_code varchar(50) NULL,
  CONSTRAINT PK_geo_dim_clone PRIMARY KEY ( geo_id )
 );
 
@@ -88,6 +88,9 @@ where city = 'Burlington'  and postal_code is null;
 update stg.orders
 set postal_code = '05401'
 where city = 'Burlington'  and postal_code is null;
+
+-- setting postal_code column type in stg.orders as varchar(50) to avoid errors as postal_code can start from 0
+ALTER TABLE stg.orders ALTER COLUMN postal_code TYPE varchar(50) USING postal_code::varchar;
 
 -- checking
 select * from dw.geo_dim

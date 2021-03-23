@@ -133,7 +133,7 @@ select * from dw.product_dim cd;
 drop table if exists dw.calendar_dim ;
 CREATE TABLE dw.calendar_dim
 (
-dateid serial  NOT NULL,
+date_id serial  NOT NULL,
 year        int NOT NULL,
 quarter     int NOT NULL,
 month       int NOT NULL,

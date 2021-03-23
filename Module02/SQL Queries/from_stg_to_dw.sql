@@ -89,7 +89,7 @@ update stg.orders
 set postal_code = '05401'
 where city = 'Burlington'  and postal_code is null;
 
--- setting postal_code column type in stg.orders as varchar(50) to avoid errors as postal_code can start from 0
+-- fixing discrepancy in data type (as postal_code can start from 0)
 ALTER TABLE stg.orders ALTER COLUMN postal_code TYPE varchar(50) USING postal_code::varchar;
 
 -- checking

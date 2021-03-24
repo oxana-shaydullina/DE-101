@@ -11,11 +11,11 @@ create schema dw;
 
 -- creating a table
 drop table if exists dw.shipping_dim ;
-CREATE TABLE shipping_dim
+CREATE TABLE dw.shipping_dim
 (
  ship_id       serial NOT NULL,
  shipping_mode varchar(50) NOT NULL,
- CONSTRAINT PK_shipping_dim_clone PRIMARY KEY ( ship_id )
+ CONSTRAINT PK_shipping_dim PRIMARY KEY ( ship_id )
 );
 
 -- deleting rows
@@ -34,12 +34,12 @@ select * from dw.shipping_dim sd;
 -- CUSTOMER DIMENSION
 
 drop table if exists dw.customer_dim ;
-CREATE TABLE customer_dim
+CREATE TABLE dw.customer_dim
 (
  cust_id       serial NOT NULL,
  customer_id   varchar(50) NOT NULL,
  customer_name varchar(50) NOT NULL,
- CONSTRAINT PK_customer_dim_clone_clone PRIMARY KEY ( cust_id )
+ CONSTRAINT PK_customer_dim PRIMARY KEY ( cust_id )
 );
 
 -- deleting rows
@@ -57,7 +57,7 @@ select * from dw.customer_dim cd;
 -- GEO DIMENSION
 
 drop table if exists dw.geo_dim ;
-CREATE TABLE geo_dim
+CREATE TABLE dw.geo_dim
 (
  geo_id      serial NOT NULL,
  country     varchar(50) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE geo_dim
  state       varchar(50) NOT NULL,
  city        varchar(50) NOT NULL,
  postal_code varchar(50) NULL,
- CONSTRAINT PK_geo_dim_clone PRIMARY KEY ( geo_id )
+ CONSTRAINT PK_geo_dim PRIMARY KEY ( geo_id )
 );
 
 -- deleting rows
@@ -75,7 +75,7 @@ truncate table dw.geo_dim;
 insert into dw.geo_dim 
 select 100+row_number() over(), country, region, state, city, postal_code from (select distinct country, region, state, city, postal_code from stg.orders ) a;
 
--- data quality check
+-- data quality checking
 select distinct country, city, state, postal_code from dw.geo_dim
 where country is null or city is null or postal_code is null;
 
@@ -84,13 +84,13 @@ update dw.geo_dim
 set postal_code = '05401'
 where city = 'Burlington'  and postal_code is null;
 
--- also update source file
+-- also updating source file
 update stg.orders
 set postal_code = '05401'
 where city = 'Burlington'  and postal_code is null;
 
 -- fixing discrepancy in data type (as postal_code can start from 0)
-ALTER TABLE stg.orders ALTER COLUMN postal_code TYPE varchar(50) USING postal_code::varchar;
+alter table stg.orders alter column postal_code type varchar(50) using postal_code::varchar;
 
 -- checking
 select * from dw.geo_dim
@@ -141,7 +141,7 @@ week        int NOT NULL,
 date        date NOT NULL,
 week_day    varchar(20) NOT NULL,
 leap  varchar(20) NOT NULL,
-CONSTRAINT PK_calendar_dim PRIMARY KEY ( dateid )
+CONSTRAINT PK_calendar_dim PRIMARY KEY ( date_id )
 );
 
 -- deleting rows

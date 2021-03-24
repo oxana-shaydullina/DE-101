@@ -16,8 +16,8 @@ order by state asc;
 select 
 year, 
 segment, 
-sum(sales) as total_sales, 
-sum(profit) as total_profit 
+round(sum(sales), 2) as total_sales, 
+round(sum(profit), 2) as total_profit 
 from dw.sales_fact join dw.calendar_dim on dw.sales_fact.order_date_id = dw.calendar_dim.date_id join dw.product_dim using(prod_id)
 group by 1, 2
 order by 1;

@@ -25,8 +25,8 @@ order by 1;
 -- sales and profit per manager
 select 
 person, 
-sum(sales) as total_sales, 
-sum(profit) as total_profit
+round(sum(sales), 2) as total_sales, 
+round(sum(profit), 2) as total_profit
 from stg.people join dw.geo_dim on stg.people.region = dw.geo_dim.region join dw.sales_fact using(geo_id)
 group by person;
 

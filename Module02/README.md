@@ -78,4 +78,4 @@ join dw.customer_dim cd on cd.cust_id = sf.cust_id
 
 [Google Data Studio dashboard](https://datastudio.google.com/u/0/reporting/16edfb50-cef8-4941-8a3c-ea971948a2dd/page/5xU9B)
 
-<img src="https://github.com/xokcanax/DE-101/blob/main/Module02/img/Google%20Data%20Studio_Sample_Superstore_-_Dashboard.png" width="1000">
+<img src="https://github.com/xokcanax/DE-101/blob/main/Module02/img/Google%20Data%20Studio%20-%20Sample%20Superstore%20-%20Dashboard.png" width="1000">

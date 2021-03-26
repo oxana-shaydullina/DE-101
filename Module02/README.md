@@ -72,7 +72,7 @@ Connection query:
 select * from dw.sales_fact sf
 join dw.shipping_dim s on sf.ship_id = s.ship_id 
 join dw.geo_dim g on sf.geo_id = g.geo_id 
-join de.product_dim p on p.prod_id = sf.prod_id 
+join dw.product_dim p on p.prod_id = sf.prod_id 
 join dw.customer_dim cd on cd.cust_id = sf.cust_id
 ```
 

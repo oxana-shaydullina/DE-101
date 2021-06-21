@@ -1,3 +1,5 @@
+## [Module02](https://github.com/Data-Learn/data-engineering/tree/master/DE-101%20Modules/Module02) — Something SQL, something dashboard
+
 ## DW Creation
 
 ### Dimensional Modelling 
